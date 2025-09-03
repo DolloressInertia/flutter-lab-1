@@ -107,12 +107,24 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            Text(
+            Container(
+            color: Colors.blue,         // 2. Set color of the container
+            height: 100,                // 3. Set height
+            width: 200,                 // 3. Set width
+            child: Center(
+            child: Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            //  style: Theme.of(context).textTheme.headlineMedium,
+                style: const TextStyle(
+               fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
             ),
-          ],
-        ),
+            ),
+            ),
+            ),
+          ], 
+      ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
